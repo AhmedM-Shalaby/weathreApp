@@ -1,0 +1,187 @@
+[
+            {
+                "id": "45",
+                "governorate_id": "1",
+                "city_name_ar": "القاهرة",
+                "city_name_en": "Cairo"
+            },
+            {
+                "id": "46",
+                "governorate_id": "1",
+                "city_name_ar": "الزمالك",
+                "city_name_en": "Zamalek"
+            },
+            {
+                "id": "58",
+                "governorate_id": "2",
+                "city_name_ar": "الجيزة",
+                "city_name_en": "Giza"
+            },
+            {
+                "id": "137",
+                "governorate_id": "4",
+                "city_name_ar": "المنصورة",
+                "city_name_en": "Mansoura"},
+            {
+                "id": "156",
+                "governorate_id": "5",
+                "city_name_ar": "الغردقة",
+                "city_name_en": "Hurghada"
+            },
+            {
+                "id": "158",
+                "governorate_id": "5",
+                "city_name_ar": "سفاجا",
+                "city_name_en": "Safaga"
+            },
+            {
+                "id": "166",
+                "governorate_id": "6",
+                "city_name_ar": "رشيد",
+                "city_name_en": "Rashid"
+            },
+            {
+                "id": "192",
+                "governorate_id": "8",
+                "city_name_ar": "طنطا",
+                "city_name_en": "Tanta"
+            },
+            {
+                "id": "217",
+                "governorate_id": "10",
+                "city_name_ar": "تلا",
+                "city_name_en": "Tala"
+            },
+            {
+                "id": "237",
+                "governorate_id": "12",
+                "city_name_ar": "طوخ",
+                "city_name_en": "Tukh"
+            },
+            {
+                "id": "238",
+                "governorate_id": "12",
+                "city_name_ar": "قها",
+                "city_name_en": "Qaha"
+            },
+            {
+                "id": "244",
+                "governorate_id": "13",
+                "city_name_ar": "باريس",
+                "city_name_en": "Paris"
+            },
+            {
+                "id": "248",
+                "governorate_id": "13",
+                "city_name_ar": "الداخلة",
+                "city_name_en": "Dakhla"
+            },
+            {
+                "id": "249",
+                "governorate_id": "14",
+                "city_name_ar": "السويس",
+                "city_name_en": "Suez"
+            },
+            {
+                "id": "254",
+                "governorate_id": "15",
+                "city_name_ar": "أسوان",
+                "city_name_en": "Aswan"
+            },
+            {
+                "id": "266",
+                "governorate_id": "16",
+                "city_name_ar": "أسيوط",
+                "city_name_en": "Assiut"
+            },
+            {
+                "id": "295",
+                "governorate_id": "19",
+                "city_name_ar": "دمياط",
+                "city_name_en": "Damietta"
+            },
+            {
+                "id": "327",
+                "governorate_id": "21",
+                "city_name_ar": "دهب",
+                "city_name_en": "Dahab"
+            },
+            {
+                "id": "328",
+                "governorate_id": "21",
+                "city_name_ar": "نويبع",
+                "city_name_en": "Nuweiba"
+            },
+            {
+                "id": "329",
+                "governorate_id": "21",
+                "city_name_ar": "طابا",
+                "city_name_en": "Taba"
+            },
+            {
+                "id": "343",
+                "governorate_id": "22",
+                "city_name_ar": "بيلا",
+                "city_name_en": "Bella"
+            },
+            {
+                "id": "344",
+                "governorate_id": "22",
+                "city_name_ar": "الرياض",
+                "city_name_en": "Riyadh"
+            },
+            {
+                "id": "354",
+                "governorate_id": "23",
+                "city_name_ar": "السلوم",
+                "city_name_en": "Salloum"
+            },
+            {
+                "id": "355",
+                "governorate_id": "23",
+                "city_name_ar": "سيوة",
+                "city_name_en": "Siwa"
+            },
+            {
+                "id": "356",
+                "governorate_id": "23",
+                "city_name_ar": "مارينا",
+                "city_name_en": "Marina"
+            },
+            {
+                "id": "358",
+                "governorate_id": "24",
+                "city_name_ar": "الأقصر",
+                "city_name_en": "Luxor"
+            },
+            {
+                "id": "360",
+                "governorate_id": "24",
+                "city_name_ar": "إسنا",
+                "city_name_en": "Esna"
+            },
+            {
+                "id": "367",
+                "governorate_id": "25",
+                "city_name_ar": "قنا",
+                "city_name_en": "Qena"
+            },
+            {
+                "id": "377",
+                "governorate_id": "26",
+                "city_name_ar": "العريش",
+                "city_name_en": "Arish"
+            },
+            {
+                "id": "380",
+                "governorate_id": "26",
+                "city_name_ar": "رفح",
+                "city_name_en": "Rafah"
+            },
+            {
+                "id": "383",
+                "governorate_id": "27",
+                "city_name_ar": "سوهاج",
+                "city_name_en": "Sohag"
+            }
+        ]

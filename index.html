@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container-fluid ">
+      <div class="logo">
+        <i class="fa-solid fa-cloud-sun"></i>
+        <h1>Weather App</h1>
+      </div>
+     <div class="row">
+      <div class="col-lg-6 mx-auto mt-5">
+        <h1 class="head__title">Add City Weather</h1>
+        <form action="#" class="form-control p-4" autocomplete="off">
+          <input type="text" class="form-control"  placeholder="Enter City" id="input">
+          <table class="table select">
+            <thead>
+              <tr>
+                <th>English</th>
+                <th>Arabic</th>
+              </tr>
+            </thead>
+            <tbody id="data">
+            </tbody>
+          </table>
+          <button class="btn btn-info" id="add" type="submit">Add</button>
+        </form>
+      </div>
+     </div>
+    </div>
+  </header>
+<section class="body__DataCity">
+  <div class="container-fluid">
+    <div class="row" id="Shows">
+    </div>
+  </div>
+</section>
+<script src="js/sweetAlert.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

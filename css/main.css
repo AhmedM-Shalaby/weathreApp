@@ -1,0 +1,169 @@
+@import url(bootstrap.min.css);
+@import url(normalize.css);
+
+
+
+img{
+    width: 100%;
+    display: block;
+}
+.container-fluid  {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+body {
+    /* background-image: url(../img/WhatsApp\ Image\ 2023-07-11\ at\ 03.13.12.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center; */
+    background-color: #001C30;
+}
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    margin-top: 50px;
+}
+i {
+    font-size: 60px;
+    color: white;
+}
+.logo h1 {
+    color: #fff;
+}
+
+.head__title {
+    font-size: 45px;
+    color: #fff;
+}
+#input {
+    margin-bottom: 20px;   
+    padding: 20px 20px 14px 20px;
+}
+form{
+    position: relative;
+}
+.select {
+    position: absolute;
+    background: #333;
+    color: #fff;
+    width: 30%;
+    right: 3%;
+    top: 65%;
+    border-radius: 5px;
+    display: none;
+}
+.select::after {
+    content: "";
+    position: absolute;
+    top: -28px;
+    left: 10%;
+    transform: translate(-50%,0%);
+    border: 15px solid transparent;
+    border-bottom-color: #333;
+}
+
+.btn,
+.btn:hover{
+    width: 50%;
+    color: #fff;
+    font-size: 20px;
+}
+.headAuto {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  padding: 5px 10px;
+  border-left: 1px solid;
+}
+.cities {
+    margin: 0;
+    color: #fff;
+    padding: 5px 10px;
+    border-bottom: 1px solid;
+    transition: all .3s;
+}
+.cities:last-child {
+    border-bottom: 0px solid;
+    
+}
+.cities:hover{
+    background-color: #aaa;
+}
+
+
+.left {
+  border-left: 1px solid;
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+
+
+
+.city-cont{
+    padding: 0 15px;
+    position: relative;
+  }
+  .content{
+    position: relative;
+    background-color: #BACDDB;
+    padding: 30px;
+    border-radius: 15px;
+  }
+  .close {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 50px;
+  }
+  .city-title{
+    position: relative;
+    width: fit-content;
+    font-size: 20px;
+  }
+  
+  .country{
+    position: absolute;
+    left: calc(100% + 5px);
+    top: 2px;
+    font-size: 12px;
+  }
+  
+  .temperature{
+    position: relative;
+    width:  fit-content;
+  }
+  
+  .temp{
+    font-size: 70px;
+    font-weight: bolder;
+  }
+  
+  .celesius{
+    position: absolute;
+    top: 5px;
+    left: 100%;
+    font-size: 20px;
+  }
+
+.image {
+    width: 100px;
+}
+/* 
+  @media screen and (max-width : 575px) {
+    .content {
+        display: flex;
+        justify-content: end;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .country {
+        left: 0;
+    top: -20px;
+    }
+    .image {
+        width: 50px;
+    }
+  } */
