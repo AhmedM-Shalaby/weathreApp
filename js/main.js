@@ -3,9 +3,9 @@ const add = document.getElementById("add")
 const closeWeather = document.querySelectorAll(".close")
 const Shows = document.getElementById("Shows")
 const dataShearch = document.getElementById("data")
-const select =document.querySelector(".select")
-let dataHistory =[]
-let allCities=[]
+const select = document.querySelector(".select")
+let dataHistory = []
+let allCities = []
 let req = false
 input.focus()
 // Get Weather Data
@@ -13,18 +13,18 @@ async function getWeather(valueCity) {
   let apiData = `https://api.openweathermap.org/data/2.5/weather?q=${valueCity.city_name_en}&appid=4d8fb5b93d4af21d66a2948710284366&units=metric`;
   const res = await fetch(apiData);
   const data = await res.json();
-  showWeather(data,valueCity);
+  showWeather(data, valueCity);
 }
 // ==============================================================
-document.body.addEventListener("click",(e)=>{
-let Element = e.target
-if (Element.dataset.del== "yes") {
-  deleteWeather(Element)
-}
+document.body.addEventListener("click", (e) => {
+  let Element = e.target
+  if (Element.dataset.del == "yes") {
+    deleteWeather(Element)
+  }
 })
-// Check Data History 
-if (localStorage.getItem("data") !== null) {
-dataHistory =JSON.parse(localStorage.getItem("data"))
+// Check Data History
+if (localStorage.getItem("dataWeather") !== null) {
+  dataHistory = JSON.parse(localStorage.getItem("dataWeather"))
   for (let i = 0; i < dataHistory.length; i++) {
     getWeather(dataHistory[i]);
   }
@@ -33,49 +33,51 @@ dataHistory =JSON.parse(localStorage.getItem("data"))
 async function getCities() {
   const res = await fetch("data/cities.json")
   const data = await res.json()
-  return allCities=(data)
+  return allCities = (data)
 }
 // =======================================================
 function fliterData(arr) {
-  let city = arr.find(Element=>{
+  let city = arr.find(Element => {
     return Element.city_name_en.toLowerCase() == input.value.toLowerCase() ||
-    Element.city_name_ar.toLowerCase() == input.value.toLowerCase()
+      Element.city_name_ar.toLowerCase() == input.value.toLowerCase()
   })
   if (city == undefined) {
     Swal.fire('Not Found')
   }
-  else if (checkIsHere(city)){
+  else if (checkIsHere(city)) {
     Swal.fire('You have already added')
   }
-    else{
+  else {
     getWeather(city);
     dataHistory.push(city)
-    localStorage.setItem("data",JSON.stringify(dataHistory))
-  } 
+    localStorage.setItem("dataWeather", JSON.stringify(dataHistory))
+  }
   input.value = ""
 }
 function checkIsHere(obj) {
-  let here = dataHistory.find(Element=>{
+  console.log(dataHistory);
+
+  let here = dataHistory.find(Element => {
     return Element.id == obj.id
   })
   return here
 }
-add.addEventListener("click" ,(e)=>{  
-e.preventDefault()
+add.addEventListener("click", (e) => {
+  e.preventDefault()
 
-if (input.value !== "") {
-  fliterData(allCities)
-  select.style.display = "none"
-  dataShearch.innerHTML = ""
- }else {
-  Swal.fire(
-    'Ooops',
-    'Write The Name City?',
-    'question'
-  )
- }
+  if (input.value !== "") {
+    fliterData(allCities)
+    select.style.display = "none"
+    dataShearch.innerHTML = ""
+  } else {
+    Swal.fire(
+      'Ooops',
+      'Write The Name City?',
+      'question'
+    )
+  }
 })
-function showWeather(obj,{id,city_name_ar}) {
+function showWeather(obj, { id, city_name_ar }) {
   Shows.innerHTML += `
   <div class="col-lg-3 col-sm-6 my-5 parent">
         <div class="content">
@@ -100,28 +102,28 @@ function showWeather(obj,{id,city_name_ar}) {
         `
 }
 function deleteWeather(el) {
-  dataHistory = dataHistory.filter(Element=>{
+  dataHistory = dataHistory.filter(Element => {
     return Element.id !== el.id
-  })  
-let parent = el.closest(".parent")
-parent.remove()
-  localStorage.setItem("data",JSON.stringify(dataHistory))
-}  
-function formSelect(arr,value) {
-  let show= arr.filter(Element=>{
+  })
+  let parent = el.closest(".parent")
+  parent.remove()
+  localStorage.setItem("dataWeather", JSON.stringify(dataHistory))
+}
+function formSelect(arr, value) {
+  let show = arr.filter(Element => {
     return Element.city_name_en.toLowerCase().includes(value) ||
-    Element.city_name_ar.toLowerCase().includes(value)
+      Element.city_name_ar.toLowerCase().includes(value)
   });
   autoComplet(show);
 }
-input.addEventListener("input",()=>{
+input.addEventListener("input", () => {
   let search = input.value.toLowerCase()
   if (!req) {
     req = true
-    return getCities().then(res=>{formSelect(res,search)})
-   }else{
-    formSelect(allCities,search)
-   }
+    return getCities().then(res => { formSelect(res, search) })
+  } else {
+    formSelect(allCities, search)
+  }
 })
 function autoComplet(arr) {
   if (arr.length > 5) {
@@ -129,31 +131,27 @@ function autoComplet(arr) {
   }
   let data = ""
   for (let i = 0; i < arr.length; i++) {
-    data +=`
+    data += `
     <tr>
       <td class="nameCity">${arr[i]["city_name_en"]}</td>
       <td class="left nameCity">${arr[i].city_name_ar}</td>
     </tr>`
-}
+  }
   if (!input.value == "") {
     select.style.display = "table"
     dataShearch.innerHTML = data
-  }else {
+  } else {
     select.style.display = "none"
     dataShearch.innerHTML = ""
   }
   selectNameCity()
 }
 
-function  selectNameCity(){
+function selectNameCity() {
   let test = document.querySelectorAll(".nameCity")
-  console.log(input.Placeholder);
-  test.forEach(Element=>{
-    Element.addEventListener("click",()=>{
+  test.forEach(Element => {
+    Element.addEventListener("click", () => {
       input.value = Element.textContent
-      })
+    })
   })
 }
-
-
-
